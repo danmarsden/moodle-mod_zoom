@@ -36,6 +36,14 @@ defined('MOODLE_INTERNAL') || die();
 abstract class activity_base extends \core_analytics\local\indicator\community_of_inquiry_activity {
 
     /**
+     * feedback_viewed_events
+     *
+     * @return string[]
+     */
+    protected function feedback_viewed_events() {
+        return array('\mod_zoom\event\join_meeting_button_clicked');
+    }
+    /**
      * Grading not implemented.
      *
      * @return bool
